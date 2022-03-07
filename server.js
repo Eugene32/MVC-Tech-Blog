@@ -1,6 +1,9 @@
 const express = require('express');
 const session = require('express-session');
+const exphbs = require('express-handlebars');
 const routes = require('./controllers');
+const path = require('path');
+
 const helmet = require("helmet"); //added to secure express app
 
 const sequelize = require('./config/connection');
