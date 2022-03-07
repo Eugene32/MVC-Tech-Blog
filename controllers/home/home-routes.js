@@ -14,15 +14,15 @@ router.get("/", async (req, res) => {
               ],
         });
 
-        const posts = postData.map((post) => post.get ({ plain: true }));
+        const allPosts = postData.map((post) => post.get ({ plain: true }));
 
-        res.render('homepage', { posts });
+        res.render('homepage', { allPosts });
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
-// setup login route
+// setup login route 
 router.get("/login", async (req, res) => {
     try {
         if (req.session.logged_in) {
@@ -36,7 +36,7 @@ router.get("/login", async (req, res) => {
     }
 });
 
-// renders a single post to the single-post handlebars
+// Shows a single post based in 1 id.
 router.get("/post/:id", withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
@@ -56,10 +56,10 @@ router.get("/post/:id", withAuth, async (req, res) => {
             ],
           });
       
-          const post = postData.get({ plain: true });
+          const posting = postData.get({ plain: true });
       
           res.render('single-post', {
-            ...post,
+            ...posting,
             logged_in: req.session.logged_in
           });
     } catch (err) {
