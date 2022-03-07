@@ -26,7 +26,7 @@ const sess = {
 };
 
 app.use(session(sess));
-
+const hbs = exphbs.create({  });
 
 // Informs Express.js to use the handlebars template engine
 app.engine('handlebars', hbs.engine);
