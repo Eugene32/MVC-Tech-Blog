@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models');
-const withAuth = require('../utils/auth');  
-
+const withAuth = require('../utils/auth');
 
 router.get("/", async (req, res) => {
     try {
@@ -14,15 +13,14 @@ router.get("/", async (req, res) => {
               ],
         });
 
-        const allPosts = postData.map((post) => post.get ({ plain: true }));
+        const posts = postData.map((post) => post.get ({ plain: true }));
 
-        res.render('homepage', { allPosts });
+        res.render('homepage', { posts });
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
-// setup login route 
 router.get("/login", async (req, res) => {
     try {
         if (req.session.logged_in) {
@@ -36,7 +34,7 @@ router.get("/login", async (req, res) => {
     }
 });
 
-// Shows a single post based in 1 id.
+// renders a single post to the single-post handlebars
 router.get("/post/:id", withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
@@ -56,10 +54,10 @@ router.get("/post/:id", withAuth, async (req, res) => {
             ],
           });
       
-          const posting = postData.get({ plain: true });
+          const post = postData.get({ plain: true });
       
           res.render('single-post', {
-            ...posting,
+            ...post,
             logged_in: req.session.logged_in
           });
     } catch (err) {
