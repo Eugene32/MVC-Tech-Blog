@@ -7,10 +7,10 @@ const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 require('dotenv').config(); //Added so that secret key will not be visible for accessing
-app.use(helmet()); //invoke helmet function for security
+app.use(helmet()); //invoke helmet function for security of express
 
 const sess = {
   secret: process.env.secret, //secret key will refer to .env file.
