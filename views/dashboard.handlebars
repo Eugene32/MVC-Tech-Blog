@@ -1,0 +1,22 @@
+<div class="row mb-4 post-list">
+    <div>
+        <button type="submit"><a href="/dashboard/newPost" class="btn btn-primary">NEW topic</a></button>
+    </div>
+
+    {{#each posts as |post| }}
+    <article class="post">
+        <div class="title">
+            <a href="/post/{{id}}">{{title}}</a>
+        </div>
+        <div class="description">
+            {{description}}
+        </div>
+        <div class="user-info">
+            <p>Post by {{user.name}} on {{!-- {{format_date created_at}} --}}</p>
+        </div>
+        <div>
+            <a href="/dashboard/editPost/{{id}}" class="edit">EDIT</a>
+        </div>
+    </article>
+    {{/each}}
+</div>
