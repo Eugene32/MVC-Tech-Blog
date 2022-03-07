@@ -1,0 +1,32 @@
+[
+  {
+      "user_id": "1",
+      "post_id": "1",
+      "description": "No comment!"
+  },
+  {
+      "user_id": "1",
+      "post_id": "1",
+      "description": "Hmmmmmm"
+  },
+  {
+      "user_id": "2",
+      "post_id": "1",
+      "description": "I don't think so"
+  },
+  {
+      "user_id": "2",
+      "post_id": "3",
+      "description": "I am not sure about that!"
+  },
+  {
+      "user_id": "1",
+      "post_id": "3",
+      "description": "For sure?"
+  },
+  {
+      "user_id": "1",
+      "post_id": "1",
+      "description": "Really?"
+  }
+]
