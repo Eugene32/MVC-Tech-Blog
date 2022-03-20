@@ -3,11 +3,11 @@ module.exports = {
         // Format date as locale date string; depends on system setting.
         return date.toLocaleDateString();
     },
-    is_same: (a, b, opts) => {
+    is_same: (a, b, options) => {
         if (a == b) {
-            return opts.fn(this);
+            return options.fn(this);
         } else {
-            return opts.inverse(this);
+            return options.inverse(this);
         };
     }
 };

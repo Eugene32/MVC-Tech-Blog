@@ -30,9 +30,16 @@ app.use(helmet()); //invoke helmet function for security of express
 
 
 // Session configuration
+
 const sess = {
-  secret: process.env.secret, //secret key will refer to .env file.
-  cookie: {},
+  secret: process.env.key, //secret should be coming in from .env file.
+  cookie: {
+      // maxAge of 30 minutes listed in milliseconds.
+      maxAge: 1800000,
+      httpOnly: true,
+      secure: false,
+      sameSite: 'strict',
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -40,14 +47,19 @@ const sess = {
   })
 };
 
+
+// Start the sequelize db session.
 app.use(session(sess));
+
+// Handlebars helpers
+const hbs = exphbs.create({ helpers });
+
 
 // Informs Express.js to use the handlebars as display engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-// Handlebars helpers
-const hbs = exphbs.create({ helpers });
+
 
 // Configure express middleware
 app.use(express.json());
