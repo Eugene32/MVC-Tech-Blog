@@ -3,13 +3,19 @@ const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Creates a new post
-router.post("/", withAuth, async (req, res) => {
+// router.post("/", withAuth, async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
     try {
         const newPost = await Post.create({
             ...req.body,
             user_id: req.session.user_id,
         });
-        res.status(200).json(newPost);
+
+        // res.status(200).json(newPost);
+        res.render('single-post', {
+            ...user,
+            logged_in: true,
+        });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -18,7 +24,7 @@ router.post("/", withAuth, async (req, res) => {
 // Updates a post
 router.put("/:id", withAuth, async (req, res) => {
     try {
-        const postData = await Post.update ({
+        const postData = await Post.update({
             where: {
                 id: req.params.id,
                 user_id: req.session.user_id,
