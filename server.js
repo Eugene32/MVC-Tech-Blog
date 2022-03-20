@@ -22,7 +22,7 @@ const helpers = require('./utils/helper');
 require('dotenv').config(); 
 
 // PORT number to be taken from .env file
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3030;
 
 
 const helmet = require("helmet"); //added to secure express app
