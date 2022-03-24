@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Post, User, Comment } = require("../models");
 const withAuth = require('../utils/auth');
 
-// Renders the dashboardRoutes home page 
+// Renders the dashboard page with the users blogs
 router.get("/", withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
@@ -10,10 +10,10 @@ router.get("/", withAuth, async (req, res) => {
             include: [{ model: Post }],
         });
 
-        // Convert data
+        // Serialize data so the template can read it
         const user = userData.get({ plain: true });
 
-        // Render dashboar
+        // Pass serialized data and session flag into template
         res.render('dashboard', {
             ...user,
             logged_in: true
@@ -24,7 +24,7 @@ router.get("/", withAuth, async (req, res) => {
 });
 
 
-// Displays new posting.
+// Renders the new post page where you can create a new post
 router.get("/newPost", withAuth, async (req, res) => {
     try {
         res.render("new-post", {
@@ -35,7 +35,7 @@ router.get("/newPost", withAuth, async (req, res) => {
     }
 });
 
-// Shows edit post page
+// Renders the edit post page where you can edit a post
 router.get("/editPost/:id", withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {

@@ -7,7 +7,6 @@ const commentFormHandler = async (event) => {
         window.location.toString().split('/').length - 1
     ];
 
-    // if there is a comment -- preventing from users submitting empty comments 
     if (description) {
         const response = await fetch('/api/comments', {
             method: 'POST',
@@ -28,4 +27,6 @@ const commentFormHandler = async (event) => {
     }
 };
 
-document.querySelector('.new-comment-form').addEventListener('submit', commentFormHandler);
+document
+    .querySelector('.new-comment-form')
+    .addEventListener('submit', commentFormHandler);
