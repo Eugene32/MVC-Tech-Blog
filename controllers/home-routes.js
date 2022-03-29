@@ -42,7 +42,7 @@ router.get("/login", async (req, res) => {
 });
 
 // Renders a single post to the single-post handlebars
-router.get("/posts/:id", withAuth, async (req, res) => {
+router.get("/post/:id", withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -73,5 +73,9 @@ router.get("/posts/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+
+
 
 module.exports = router;
