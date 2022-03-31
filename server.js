@@ -73,5 +73,5 @@ app.use(routes);
 
 // Start database and server to start listening at PORT (number @ .env file)
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening on port localhost:${PORT}`));
+  app.listen(PORT, () => console.log(`Serve is active`));
 });
