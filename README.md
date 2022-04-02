@@ -59,7 +59,7 @@ Used the following technologies:
 ### Demo:  
 - Heroku link:
 
-    "https://mvc-tech-blog-rey.herokuapp.com/"
+    https://mvc-tech-blog-rey.herokuapp.com/
 
 - Use the following to login:
     - email: `Berny@fakemail.com`
