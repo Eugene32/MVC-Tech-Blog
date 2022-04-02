@@ -4,7 +4,13 @@
 
 ### Description:  
 
-
+Used the following technologies:
+- Node.js
+- MySQL2 - handles information as a database
+- Sequelize - Node.js ORM for MySQL2.
+- Handlebars - display engine for html and server as a code refactor.
+- dotenv - keeps sensitive information hidden.
+- helmet - addtional security for express.js.
 
 ## TABLE OF CONTENTS:
 
@@ -51,6 +57,15 @@
 - None
 
 ### Demo:  
+- Heroku link:
+
+    `https://mvc-tech-blog-rey.herokuapp.com/`
+
+- Use the following to login:
+    - email: `Berny@fakemail.com`
+    - password: `password2`
+
+
 - Demo page: 
 
 ![alt text][logo]
