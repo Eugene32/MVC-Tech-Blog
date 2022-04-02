@@ -21,16 +21,21 @@
 - You must have MYSQL installed in your computer.
 - Under console, command prompt, or terminal, change to directory where server.js is located.
 - Type `npm i`.
+- Go to the subdirectory /db by typing `cd /db` on your console.
+- Launch SQL by typing `mysql -u root -p`.  
+- Enter your mysql password.  Once successful, you will be under SQL environment.
+- Type `source schema.sql`. Press 'ENTER' key.
+- Type `quit`. Press 'ENTER' key.
 - Create .env file on the root directory (where server.js is located).
     - The file must contain the following:
-       `- DB_NAME=ecommerce_db`
-       `- DB_USER= root`
-       `- DB_PASSWORD='password'  <--- The "password" refers to your mysql password. `
-       `- key=encryption_key  <-- "encryption_key" is your chosen decryption key.`
+       - `DB_NAME=ecommerce_db`
+       - `DB_USER= root`
+       - `DB_PASSWORD='password'  <--- The "password" refers to your mysql password. `
+       - `key=encryption_key  <-- "encryption_key" is your chosen decryption key.`
 - Create a .gitignore file (under root directory) and must contain:
-     `- node_modules`
-     `- .DS_Store`
-     `- .env`
+     - `node_modules`
+     - `.DS_Store`
+     - `.env`
 - At the root directory:
     - Type `npm run seed` on the CLI or Terminal.  This will fill up your database with starting informations.
     - Type `npm start` to start under CLI or Terminal. Alternatively, should you want to make changes in the code, type `npm run dev` to run the server and be able to change the code without having to restart the server every time.
