@@ -57,9 +57,6 @@
 
 [logo]: Assets/demo/demo-01.gif "E-commerce Back-End demo"
 
-- Video link:  [Video: Category](https://drive.google.com/file/d/1q4l_tl_GvmR4kw3qaUc51PIPfPwQayCi/view)
-- Video link:  [Video: Product](https://drive.google.com/file/d/1hqTTsaCguHt-DdhI8Zmisv2IqU8w9AHK/view)
-- Video link:  [Video: Tags](https://drive.google.com/file/d/1c40iXHZ45Kkj3sPKb_8WqrphgNUqic63/view)
 
 ### Questions: 
 
