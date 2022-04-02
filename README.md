@@ -70,7 +70,7 @@ Used the following technologies:
 
 ![alt text][logo]
 
-[logo]: Assets/demo/demo-01.gif "E-commerce Back-End demo"
+[logo]: public/demo/HomePage.png
 
 
 ### Questions: 
