@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Renders the login page, if logged in redirects to the homepage
+// Renders the login page, if logged-in redirects to the homepage
 router.get("/login", async (req, res) => {
   try {
     if (req.session.logged_in) {
@@ -40,6 +40,21 @@ router.get("/login", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+
+router.get("/signup", async (req, res) => {
+  try {
+      if (req.session.logged_in) {
+          res.redirect('/');
+          return;
+      }
+      res.render('signup');
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
 
 // Renders a single post to the single-post handlebars
 router.get("/post/:id", withAuth, async (req, res) => {
