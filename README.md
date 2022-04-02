@@ -74,9 +74,9 @@ Home page:
 
 Login page: 
 
-![alt text][logo]
+![alt text][logo1]
 
-[logo]: public/demo/Login.png
+[logo1]: public/demo/Login.png
 
 Signup page: 
 
