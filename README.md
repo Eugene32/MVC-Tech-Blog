@@ -66,11 +66,48 @@ Used the following technologies:
     - password: `password2`
 
 
-- Demo page: 
+Home page: 
 
 ![alt text][logo]
 
 [logo]: public/demo/HomePage.png
+
+Login page: 
+
+![alt text][logo]
+
+[logo]: public/demo/Login.png
+
+Signup page: 
+
+![alt text][logo]
+
+[logo]: public/demo/Signup.png
+
+Logged in page: 
+
+![alt text][logo]
+
+[logo]: public/demo/SigedIn.png
+
+Dashboard: 
+
+![alt text][logo]
+
+[logo]: public/demo/Dashboard.png
+
+Editing Post: 
+
+![alt text][logo]
+
+[logo]: public/demo/EditingPost.png
+
+Commenting on Post: 
+
+![alt text][logo]
+
+[logo]: public/demo/Commenting.png
+
 
 
 ### Questions: 
