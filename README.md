@@ -80,33 +80,33 @@ Login page:
 
 Signup page: 
 
-![alt text][logo]
+![alt text][logo2]
 
-[logo]: public/demo/Signup.png
+[logo2]: public/demo/Signup.png
 
 Logged in page: 
 
-![alt text][logo]
+![alt text][logo3]
 
-[logo]: public/demo/SigedIn.png
+[logo3]: public/demo/SigedIn.png
 
 Dashboard: 
 
-![alt text][logo]
+![alt text][logo4]
 
-[logo]: public/demo/Dashboard.png
+[logo4]: public/demo/Dashboard.png
 
 Editing Post: 
 
-![alt text][logo]
+![alt text][logo5]
 
-[logo]: public/demo/EditingPost.png
+[logo5]: public/demo/EditingPost.png
 
 Commenting on Post: 
 
-![alt text][logo]
+![alt text][logo6]
 
-[logo]: public/demo/Commenting.png
+[logo6]: public/demo/Commenting.png
 
 
 
